@@ -8,3 +8,19 @@ it('creates an action to set balance', () => {
 
 	expect(actions.setBalance(balance)).toEqual(expectedAction);
 });
+
+it('creates an action to deposit into the balance', () => {
+	const deposit = 10;
+
+	const expectedAction = { type: constants.DEPOSIT, deposit };
+
+	expect(actions.deposit(deposit)).toEqual(expectedAction);
+});
+
+it('creates an action to withdraw from the balance', () => {
+	const withdrawl = 5;
+
+	const expectedAction = { type: constants.WITHDRAWL, withdrawl };
+
+	expect(actions.withdrawl(withdrawl)).toEqual(expectedAction);
+});
